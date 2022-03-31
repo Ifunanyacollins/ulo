@@ -1,16 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: rgba(254, 254, 254, 1);
+  background: linear-gradient(
+      75deg,
+      rgba(0, 33, 200, 0.31278448879551823) 0%,
+      rgba(254, 254, 254, 1) 100%
+    )
+    no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
 html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+body,
+label {
+  font-family: "Nunito Sans" !important;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+p {
+  margin-bottom: 0.3em !important;
+}
+::-webkit-scrollbar {
+  width: 8px !important;
+  height: 8px !important;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  transition: all 0.4s ease 0s;
+  background: rgba(0, 33, 200, 0.6);
 }
 
-* {
-  box-sizing: border-box;
+::-webkit-scrollbar-track {
+  background: rgba(0, 33, 200, 0.1);
+  transition: all 0.4s ease 0s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0021c8;
+}
+
+.btnwithIcon {
+  display: flex !important;
+  align-items: center;
+  align-self: flex-start;
+  transition-duration: 100ms;
+  transition-timing-function: ease;
+}
+
+.listbox:first-child {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.ant-input {
+  border-radius: 5px !important;
 }
